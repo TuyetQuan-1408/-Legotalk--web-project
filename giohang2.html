@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="trangchustyles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="cart-container">
+    <!-- Phần thông tin khách hàng (Bên trái) -->
+    <div class="customer-info">
+        <div class="breadcrumb">
+            <a href="#">Giỏ hàng</a> &gt; <a href="#">Thông tin</a> &gt; <a href="#">Thanh toán</a>
+        </div>
+        <div class="section-title">THÔNG TIN KHÁCH HÀNG</div>
+        <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input id="name" type="text"/>
+        </div>
+        <div class="form-group">
+            <div class="half-width">
+                <label for="phone">Số điện thoại</label>
+                <input id="phone" type="text"/>
+            </div>
+            <div class="half-width">
+                <label for="email">Email</label>
+                <input id="email" type="email"/>
+            </div>
+            <hr class="custom-hr">
+        </div>
+        <div class="section-title">THÔNG TIN GIAO HÀNG</div>
+        <div class="form-group">
+            <div class="half-width">
+                <label for="city">Thành phố/Tỉnh</label>
+                <select id="city">
+                    <option value="">Chọn thành phố/tỉnh</option>
+                </select>
+            </div>
+            <div class="half-width">
+                <label for="district">Quận/Huyện</label>
+                <select id="district">
+                    <option value="">Chọn quận/huyện</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ cụ thể</label>
+            <input id="address" type="text"/>
+        </div>
+        <hr class="custom-hr">
+        <div class="section-title">PHƯƠNG THỨC THANH TOÁN</div>
+        <div class="form-group">
+            <select id="payment-method" onchange="togglePaymentForm()">
+                <option value="">Thẻ Visa/Mastercard/JCB</option>
+                <option value="cod">COD</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="note">GHI CHÚ</label>
+            <textarea id="note"></textarea>
+        </div>
+    </div>
+
+    <!-- Phần tổng kết đơn hàng (Bên phải) -->
+    <div class="summary">
+        <h3>2 sản phẩm</h3>
+        <div class="summary-item">
+            <span>Thành tiền:</span>
+            <span>7.868.000 VND</span>
+        </div>
+        <div class="summary-item">
+            <span>Mã giảm giá:</span>
+            <input type="button" style="width: 70px; color: whitesmoke;" value="Apply">
+            <input type="text" value="Nhập mã">
+        </div>
+        <div class="summary-item">
+            <span>Giảm giá:</span>
+            <span>-100.000 VND</span>
+        </div>
+        <div class="total">Tổng cộng: 7.768.000 VND</div>
+        <!-- Checkout Button that triggers the modal -->
+        <button class="checkout-btn" id="checkout-btn">THANH TOÁN</button>
+    </div>
+</div>
+<div class="payment-modal" id="payment-modal" style="display: none;">
+    <center>
+    <div class="payment-container">
+        <h1 class="payment-header">PHƯƠNG THỨC THANH TOÁN</h1>
+        <h2 class="payment-subheader">(Mastercard/Visa/JCB)</h2>
+        <label for="card-number">Số thẻ</label>
+        <input type="text" id="card-number" placeholder="Value" value="Value">
+        <label for="cvv">Mã CVV</label>
+        <input type="text" id="cvv" placeholder="Value" value="Value">
+        <label for="expiry-date">Ngày hết hạn</label>
+        <input type="text" id="expiry-date" placeholder="Value" value="Value">
+        <button>XÁC NHẬN</button>
+    </center>
+    </div>
+</div>
+<!-- Payment Method Modal (Hidden by default) -->
+
+
+</body>
+
+
+
+<script>
+    function togglePaymentForm() {
+        var paymentMethod = document.getElementById("payment-method").value;
+        if (paymentMethod === "cod") {
+            document.getElementById("payment-modal").style.display = "none";
+        } else {
+            document.getElementById("payment-modal").style.display = "block";
+        }
+    }
+</script>
+
+
+</html>

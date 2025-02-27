@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="trangchustyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb">
+        <a href="#">Giỏ hàng</a>
+        >
+        <a href="#">Thông tin</a>
+        >
+
+        <a href="#">Thanh toán</a>
+    </nav>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="https://storage.googleapis.com/a1aa/image/7FPKVWIEH3KRkhELQ6ori8ina_aij0Bb-F_YU2CmDWs.jpg" alt="Whomping Willow">
+                <div class="item-info">
+                    <h4>Whomping Willow</h4>
+                    <div class="price">4.000.000 VND</div>
+                    <div class="discounted-price">3.569.000 VND</div>
+                </div>
+                <div class="quantity">
+                    <i class="fas fa-minus" onclick="changeQuantity(this, -1)"></i>
+                    <input type="text" value="1" readonly>
+                    <i class="fas fa-plus" onclick="changeQuantity(this, 1)"></i>
+                </div>
+                <div class="remove">
+                    <i class="fas fa-trash" onclick="removeItem(this)"></i>
+                </div>
+            </div>
+    
+            <div class="cart-item">
+                <img src="https://storage.googleapis.com/a1aa/image/7FPKVWIEH3KRkhELQ6ori8ina_aij0Bb-F_YU2CmDWs.jpg" alt="Hogwarts Express">
+                <div class="item-info">
+                    <h4>Hogwarts Express</h4>
+                    <div class="price">5.000.000 VND</div>
+                    <div class="discounted-price">4.299.000 VND</div>
+                </div>
+                <div class="quantity">
+                    <i class="fas fa-minus" onclick="changeQuantity(this, -1)"></i>
+                    <input type="text" value="1" readonly>
+                    <i class="fas fa-plus" onclick="changeQuantity(this, 1)"></i>
+                </div>
+                <div class="remove">
+                    <i class="fas fa-trash" onclick="removeItem(this)"></i>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://storage.googleapis.com/a1aa/image/7FPKVWIEH3KRkhELQ6ori8ina_aij0Bb-F_YU2CmDWs.jpg" alt="Hogwarts Express">
+                <div class="item-info">
+                    <h4>Hogwarts Express</h4>
+                    <div class="price">5.000.000 VND</div>
+                    <div class="discounted-price">4.299.000 VND</div>
+                </div>
+                <div class="quantity">
+                    <i class="fas fa-minus" onclick="changeQuantity(this, -1)"></i>
+                    <input type="text" value="1" readonly>
+                    <i class="fas fa-plus" onclick="changeQuantity(this, 1)"></i>
+                </div>
+                <div class="remove">
+                    <i class="fas fa-trash" onclick="removeItem(this)"></i>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://storage.googleapis.com/a1aa/image/7FPKVWIEH3KRkhELQ6ori8ina_aij0Bb-F_YU2CmDWs.jpg" alt="Hogwarts Express">
+                <div class="item-info">
+                    <h4>Hogwarts Express</h4>
+                    <div class="price">5.000.000 VND</div>
+                    <div class="discounted-price">4.299.000 VND</div>
+                </div>
+                <div class="quantity">
+                    <i class="fas fa-minus" onclick="changeQuantity(this, -1)"></i>
+                    <input type="text" value="1" readonly>
+                    <i class="fas fa-plus" onclick="changeQuantity(this, 1)"></i>
+                </div>
+                <div class="remove">
+                    <i class="fas fa-trash" onclick="removeItem(this)"></i>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://storage.googleapis.com/a1aa/image/7FPKVWIEH3KRkhELQ6ori8ina_aij0Bb-F_YU2CmDWs.jpg" alt="Hogwarts Express">
+                <div class="item-info">
+                    <h4>Hogwarts Express</h4>
+                    <div class="price">5.000.000 VND</div>
+                    <div class="discounted-price">4.299.000 VND</div>
+                </div>
+                <div class="quantity">
+                    <i class="fas fa-minus" onclick="changeQuantity(this, -1)"></i>
+                    <input type="text" value="1" readonly>
+                    <i class="fas fa-plus" onclick="changeQuantity(this, 1)"></i>
+                </div>
+                <div class="remove">
+                    <i class="fas fa-trash" onclick="removeItem(this)"></i>
+                </div>
+            </div>
+        </div>
+    
+        <hr>
+    
+        <!-- Summary Section -->
+        <div class="summary">
+            <h3>2 sản phẩm</h3>
+            <div class="summary-item">
+                <span>Thành tiền:</span>
+                <span>7.868.000 VND</span>
+            </div>
+            <div class="summary-item">
+                <span>Mã giảm giá:</span> <span ></span> 
+                <input type="button" style="width: 70px; color: whitesmoke;" value="Apply">
+                <input type="text" value="nhập mã">
+            </div>
+            <div>
+                
+                <br>
+            </div>
+            <div class="summary-item">
+                <span>Giảm giá:</span>
+                <span>-100.000 VND</span>
+            </div>
+            <div class="total">Tổng cộng: 7.768.000 VND</div>
+            <button class="checkout-btn">THANH TOÁN</button>
+        </div>
+    </div>
+   
+</body>
+</html>
+
+
+ <!--java script của cái tăng giảm số sản phẩm-->
+<script>
+    function changeQuantity(button, amount) {
+    let inputField = button.parentElement.querySelector("input");
+    let currentValue = parseInt(inputField.value);
+
+    // Kiểm tra nếu là số hợp lệ
+    if (!isNaN(currentValue)) {
+        let newValue = currentValue + amount;
+        inputField.value = newValue > 0 ? newValue : 1; // Không cho giá trị nhỏ hơn 1
+    }
+}
+
+function removeItem(button) {
+    let cartItem = button.closest(".cart-item");
+    cartItem.remove(); // Xóa sản phẩm khỏi giỏ hàng
+}
+</script>
+<!-- hiệu ứng nhún lên nhún xuống-->
+ <script>
+function changeQuantity(button, amount) {
+    let inputField = button.parentElement.querySelector("input");
+    let currentValue = parseInt(inputField.value);
+
+    if (!isNaN(currentValue)) {
+        let newValue = currentValue + amount;
+        inputField.value = newValue > 0 ? newValue : 1;
+
+        // Thêm hiệu ứng khi bấm vào nút
+        button.classList.add("clicked");
+        setTimeout(() => {
+            button.classList.remove("clicked");
+        }, 150);
+    }
+}
+</script>

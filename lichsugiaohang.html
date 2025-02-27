@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử Mua Hàng</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="trangchustyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="account-page">
+
+<main class="main-content">
+    <!-- Tabs -->
+    <div class="tabs">
+        <div>
+            <i class="fas fa-user"></i> 
+            <a href="thongtin.html">Thông tin tài khoản </a>
+        </div>
+        <div class="active">
+            <i class="fas fa-history"></i> Lịch sử mua hàng
+        </div>
+    </div>
+
+    <!-- Order History Table -->
+    <div class="order-history">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Ngày đặt hàng</th>
+                    <th>Địa chỉ</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Mã vận chuyển</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#12345</td>
+                    <td>01/01/2025</td>
+                    <td>123 Đường ABC, Hà Nội</td>
+                    <td>500,000 VND</td>
+                    <td>Đang xử lý</td>
+                    <td>XYZ12345</td>
+                </tr>
+        </table>
+
+        <div class="no-orders">
+            <img src="trangchu/empty-cart (1).webp" alt="Cute illustration" class="cute-image">
+            <p>Có vẻ như bạn chưa thực hiện bất kỳ đơn đặt hàng nào. Tạo đơn hàng mới ngay thôi!</p>
+            <button class="submit-btn">Về trang chủ</button>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
